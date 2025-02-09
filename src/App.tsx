@@ -1,11 +1,17 @@
 
+import { Route, Routes } from 'react-router'
 import './App.css'
-import { LoginForm } from './components/LoginForm'
+import { LoginForm } from './pages/LoginForm'
+import { RegisterForm } from './pages/RegisterForm'
 
 function App() {
 
   return (
-    <LoginForm/>
+    <Routes>
+      <Route path='/' element={<LoginForm/>}/>
+      <Route path='/register' element={<RegisterForm/>}/>
+    </Routes>
+    
   )
 }
 

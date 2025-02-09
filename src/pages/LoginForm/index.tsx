@@ -1,6 +1,7 @@
-import React from 'react'
 import { FaUser, FaLock } from "react-icons/fa";
 import './styles.css'
+import { Link } from 'react-router-dom';
+import { InputBox } from '../../components/InputBox';
 
 
 export const LoginForm = () => {
@@ -8,15 +9,8 @@ export const LoginForm = () => {
     <div className='wrapper'>
       <form>
         <h1>Login</h1>
-        <div className="input-box">
-          <input type="text" placeholder='Username' required/>
-          <FaUser className='icon'/>
-        </div>
-        
-        <div className="input-box">
-          <input type="password" placeholder='Password' required/>
-          <FaLock className='icon'/>
-        </div>
+        <InputBox type='text' placeholder='Username' icon={FaUser}/>
+        <InputBox type='password' placeholder='Password' icon={FaLock}/>
 
         <div className="remember-forgot">
           <label><input type="checkbox" /> Remember me</label>
@@ -25,7 +19,7 @@ export const LoginForm = () => {
 
         <button type="submit">Login</button>
         <div className="register-link">
-          <p>Don't have an account? <a href="#">Register</a></p>
+          <p>Don't have an account? <Link to="/register">Register</Link></p>
         </div>
       </form>
     </div>
