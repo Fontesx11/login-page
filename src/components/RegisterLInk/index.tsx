@@ -9,7 +9,7 @@ interface RegisterLinkProps {
 export const RegisterLink = ({text, linkText, to} : RegisterLinkProps) => {
   return (
     <div className="register-link">
-      <p>{text}<Link to={to}>{` ${linkText}`}</Link></p>
+      <p>{text} <Link to={to}>{linkText}</Link></p>
     </div>
   )
 }

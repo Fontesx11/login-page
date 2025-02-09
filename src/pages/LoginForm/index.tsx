@@ -2,6 +2,7 @@ import { FaUser, FaLock } from "react-icons/fa";
 import './styles.css'
 import { Link } from 'react-router-dom';
 import { InputBox } from '../../components/InputBox';
+import { RegisterLink } from "../../components/RegisterLInk";
 
 
 export const LoginForm = () => {
@@ -18,9 +19,7 @@ export const LoginForm = () => {
         </div>
 
         <button type="submit">Login</button>
-        <div className="register-link">
-          <p>Don't have an account? <Link to="/register">Register</Link></p>
-        </div>
+        <RegisterLink text="Don't have an account?" linkText='Register' to='/register'/>
       </form>
     </div>
   )
