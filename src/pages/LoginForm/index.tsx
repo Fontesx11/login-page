@@ -1,6 +1,5 @@
 import { FaUser, FaLock } from "react-icons/fa";
 import './styles.css'
-import { Link } from 'react-router-dom';
 import { InputBox } from '../../components/InputBox';
 import { RegisterLink } from "../../components/RegisterLInk";
 
